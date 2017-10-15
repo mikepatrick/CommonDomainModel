@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'maven-publish'
+apply plugin: 'maven'
+
+group = 'com.cds.gemini'
+
+jar {
+	baseName = 'CommonDomainModel'
+	version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+dependencies {
+	compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.3.10'
+}
